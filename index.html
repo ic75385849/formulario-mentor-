@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario Multi pasos MENTOR</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="step-indicator">
+                <div class="step active">
+                    <div class="number">1</div>
+                    <div>TU INFORMACIÓN</div>
+                </div>
+                <div class="step">
+                    <div class="number">2</div>
+                    <div>SELECCIONA PLAN</div>
+                </div>
+                <div class="step">
+                    <div class="number">3</div>
+                    <div>COMPLEMENTOS</div>
+                </div>
+                <div class="step">
+                    <div class="number">4</div>
+                    <div>RESUMEN</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-content">
+            <form>
+                
+                <section>
+                    <h2>Información Personal</h2>
+                    <p>Por favor, proporciona tu nombre, correo electrónico y número de teléfono.</p>
+                    <label for="name">Nombre Completos</label>
+                    <input type="text" id="name" placeholder="**********">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="**********@gmail.com">
+                    <label for="phone">Número de Teléfono</label>
+                    <input type="tel" id="phone" placeholder="+51 *** *** ***">
+                    <button type="button" class="next">Siguiente</button>
+                </section>
+
+                
+                <section style="display: none;">
+                    <h2>Selecciona tu Plan postpago</h2>
+                    <p>Elige un plan que se ajuste a tus necesidades.</p>
+                    <label>
+                        <input type="radio" name="plan" value="estandar" required>
+                        Estandar - $30.00/mes  <br>(MINUTOS ILIMIMTADOS+500 MENSAJES)
+                    </label>
+                    <label>
+                        <input type="radio" name="regular" value="advanced">
+                        Regular - $60.00/mes  <br>(MINUTOS ILIMIMTADOS+MENSAJES ILIMIMTADOS+10 GB INTERNET)
+                    </label>
+                    <label>
+                        <input type="radio" name="premiun" value="pro">
+                        Premiun - $90.00/mes  <br>(MINUTOS ILIMITADOS+MENSAJES ILIMIMTADOS+INTERNET ILIMITADO)
+                    
+                    </label>
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="button" class="next">Siguiente</button>
+                </section>
+
+                
+                <section style="display: none;">
+                    <h2>Selecciona los Complementos que deseas agregar</h2>
+                    <p>Elige complementos adicionales.</p>
+                    <label>
+                        <input type="checkbox" name="addon1" value="addon1">
+                        1. 15 GB - $15.00/mes
+                    </label>
+                    <label>
+                        <input type="checkbox" name="addon2" value="addon2">
+                        2. 35 GB - $30.00/mes
+                    </label>
+                    <label>
+                        <input type="checkbox" name="addon3" value="addon3">
+                        3. 50 GB - $50.00/mes
+                    </label>
+                    <label>
+                        <input type="checkbox" name="addon3" value="addon3">
+                        4. Ninguno - $00.00/mes
+                    </label>
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="button" class="next">Siguiente</button>
+                </section>
+
+                
+                <section style="display: none;">
+                    <h2>Resumen de tu Pedido</h2>
+                    <p>Confirma tus selecciones y complementos antes de enviar.</p>
+                    <div id="summary">
+                        
+                    </div>
+                    <button type="button" class="prev">Anterior</button>
+                    <button type="submit" class="submit">Enviar</button>
+                </section>
+            </form>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
